@@ -14,27 +14,37 @@
     
 <body>
   <div class="container">
+     
+      <div class="col-md-12 col-md-offset-11" style="padding:5px;">
+        <div>
+              <a href="#"><img title="Brazil's national flag" alt="Brazil's national flag" src="img/bandeira-br.png"></a>&nbsp;|&nbsp;<a href="#"><img title="UK's national flag" alt="UK's national flag" src="img/bandeira-us.png"></a>
+        </div>
+          
+      </div>
     <div class="row">
       <div class="col-sx-12">
         <div class="panel hiq-panel">
             
             
             
-          <div class="panel-heading hiq-panel-heading">
-            <ul id="hiq-info-tabs" class="nav nav-tabs hiq-info-tabs">
-              <li class="active">
-                <a data-tab="tab-1"  href="#">Simulation Settings</a>
-              </li>
-              <li>
-                <a data-tab="tab-2" href="#" title="Some tips about the use of TONetS">How to Use</a>
-              </li>
-              <li>
-                <a data-tab="tab-3" href="#" title="TONetS's History">About this Simulator</a>
-              </li>
-              <li>
-                  <a data-tab="tab-4" href="#" title="Frequently Asked Questions">FAQ and Contact</a>
-              </li>
-            </ul>
+          <div class="panel-heading hiq-panel-heading">                  
+                    <ul id="hiq-info-tabs" class="nav nav-tabs hiq-info-tabs">  
+                        <li class="active">
+                            <a data-tab="tab-1"  href="#">Simulation Settings</a>
+                        </li>
+                        <li>
+                            <a data-tab="tab-2" href="#" title="Some tips about the use of TONetS">How to Use</a>
+                        </li>
+                        <li>
+                            <a data-tab="tab-3" href="#" title="TONetS's History">About this Simulator</a>
+                        </li>
+                        <li>
+                            <a data-tab="tab-4" href="#" title="Frequently Asked Questions">FAQ and Contact</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
           </div>
             
             
@@ -43,7 +53,7 @@
               <div id="tab-1" class="tab-content active">
 
                   <div class="row">
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-6 col-lg-3 text-center">
                     <div class="form-group">
                       <label for="numero_replicacoes" title="Quantity of replication per simulation">Reply Number:</label>
 
@@ -53,7 +63,7 @@
                   </div>
                     
                     
-                  <div class="col-md-3 text-center">
+                  <div class="col-md-6 col-lg-3 text-center">
                     <div class="form-group">
                       <label for="numero_requisicoes" title="Quantity of requests per Simulation">Requests Number:</label>
 
@@ -63,7 +73,7 @@
                   </div>
                       
                       
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-6  col-lg-3 text-center">
                         <div class="form-group">
                           <label for="numero_pontos_de_carga" title="Incrementation Traffic's Point">Loadpoints :</label>
 
@@ -71,7 +81,7 @@
                         </div>
                     
                       </div>
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-6 col-lg-3 text-center">
                         <div class="form-group">
                           <label for="significance" title="Assurance Range of Results">Significance:</label>
                           <input required="" id="significance"  min="0.0" max="100.0" name="significance" type="range" onchange="updateTextInput(this.value);" step="0.1" value="95.0" title="Assurance Range of Results">
@@ -167,8 +177,7 @@
         </div>
       </div>
     </div>
-    
-        <!-- script do input relacionado ao range -->
+ <!-- script do input relacionado ao range -->
     <script> 
         function updateTextInput(val) {
           document.getElementById('textInput').value=val+"%"; 
@@ -177,7 +186,7 @@
 
     <script src='js/jquery.min.js'></script>
     <script src="js/index.js"></script>
-
+    <script src="js/pace.min.js"\></script>
     
     
     
