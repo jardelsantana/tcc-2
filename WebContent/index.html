@@ -83,9 +83,9 @@
                       </div>
                     <div class="col-md-6 col-lg-3 text-center">
                         <div class="form-group">
-                          <label for="significance" title="Assurance Range of Results">Significance:</label>
-                          <input required="" id="significance"  min="0.0" max="100.0" name="significance" type="range" onchange="updateTextInput(this.value);" step="0.1" value="95.0" title="Assurance Range of Results">
-                            <input type="text" id="textInput" value="" readonly title="Assurance Range of Results">
+                          <label for="significance" title="Assurance Range of Results">Significance in % :</label>
+                            <input required="" id="significance"  min="0.0" max="100.0" name="significance" type="range" onchange="updateTextInput(this.value);" step="0.1" value="95.0" title="Assurance Range of Results">
+                            <input type="text" id="textInput" value="" readonly title="Assurance Range of Results" class="form-control text-center">
                         </div>
                     </div>
 
@@ -98,10 +98,10 @@
                     <div class="form-group">
                       <label for="topology" title="Nodes Positioning">Topology:</label>
                       <select class="form-control" id="topology" name="topology">
-                        <option value="1">USA</option>
-                        <option value="2">R6NTL</option>
-                        <option value="3">Brasileira</option>
-                        <option value="4"> EON </option>
+                        <option value="usa">USA</option>
+                        <option value="r6ntl">R6NTL</option>
+                        <option value="brasileira">Brasileira</option>
+                        <option value="eon"> EON </option>
                       </select>
                     </div>
                   </div>
@@ -111,17 +111,26 @@
                     <div class="form-group">
                       <label for="algorithm" title="Routing and Spectrum Allocation"><abbr title="Routing and Spectrum Allocation">RSA</abbr> Algorithm:</label>
                       <select class="form-control" id="algorithm" name="algorithm">
-                        <option value="20">First-fit</option>
-                        <option value="14">Random</option>
-                        <option value="24">Exact-fit</option>
-                        <option value="11">Random-fit</option>
+                        <option value="ff">First-fit</option>
+                        <option value="rdm">Random</option>
+                        <option value="extfit">Exact-fit</option>
+                        <option value="rdmf">Random-fit</option>
                       </select>
                     </div>
 
                   </div>
                 
                   
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            
+                            <!-- img topologia -->
+                            <img src="" alt="Network Topology" title="Network Topology" id="yourimage" class="img-responsive">
+                            
+                            
+                        </div>
                     
+                    </div>
                     
                     <div class="panel-footer hiq-panel-footer">
                         <div class="row">
@@ -180,7 +189,7 @@
  <!-- script do input relacionado ao range -->
     <script> 
         function updateTextInput(val) {
-          document.getElementById('textInput').value=val+"%"; 
+          document.getElementById('textInput').value=val; 
         }
     </script>
 
@@ -189,6 +198,20 @@
     <script src="js/pace.min.js"\></script>
     
     
+    <script> 
+    var imgsrc;
+        changeImage();
+
+    function changeImage() {
+        imgsrc = $('#topology').val()+'.jpg';
+        $('#yourimage').attr('src', imgsrc);
+    }
+
+        $("#topology").change(function() {
+            changeImage();
+        });
+    </script>
+  
     
   </body>
 </html>
