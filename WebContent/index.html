@@ -94,7 +94,7 @@
                   
                 <div class="row">                  
                     
-                  <div class="col-md-6 text-center">
+                  <div class="col-md-2 text-center">
                     <div class="form-group">
                       <label for="topology" title="Nodes Positioning">Topology:</label>
                       <select class="form-control" id="topology" name="topology">
@@ -105,16 +105,38 @@
                       </select>
                     </div>
                   </div>
-                
-                    
-                    <div class="col-md-6 text-center">
+
+                    <div class="col-md-2 text-center">
                     <div class="form-group">
-                      <label for="algorithm" title="Routing and Spectrum Allocation"><abbr title="Routing and Spectrum Allocation">RSA</abbr> Algorithm:</label>
-                      <select class="form-control" id="algorithm" name="algorithm">
-                        <option value="ff">First-fit</option>
-                        <option value="rdm">Random</option>
-                        <option value="extfit">Exact-fit</option>
-                        <option value="rdmf">Random-fit</option>
+                      <label for="routing" title="Routing Algorithm">Routing:</label>
+                      <select class="form-control" id="routing" name="routing">
+                        <option value="djk">Djikstra</option>
+                      </select>
+                    </div>
+
+                </div>
+                    
+                <div class="col-md-2 text-center">
+                    <div class="form-group">
+                      <label for="spectrumallocation" title="Spectrum Allocation Algorithm"><abbr title="Routing and Spectrum Allocation">RSA</abbr> Algorithm:</label>
+                      <select class="form-control" id="spectrumallocation" name="spectrumallocation">
+                        <option value="firstfit">First-Fit</option>
+                        <option value="bestfit">Best-Fit</option>
+                        <option value="worstfit">Worst-Fit</option>
+                        <option value="exactfit">Exact-Fit</option>
+                      </select>
+                    </div>
+
+                </div>
+                    
+                    <div class="col-md-2 text-center">
+                    <div class="form-group">
+                      <label for="integrated" title="Integrated Algorithm">Integrated:</label>
+                      <select class="form-control" id="integrated" name="integrated">
+                        <option value="firstfit">Complete Sharing</option>
+                        <option value="bestfit">Pseudo Partition</option>
+                        <option value="worstfit">Dedicated Partition</option>
+                        <option value="exactfit">Load Balance Dedicated Partition</option>
                       </select>
                     </div>
 
@@ -211,7 +233,6 @@
             changeImage();
         });
     </script>
-  
     
   </body>
 </html>
