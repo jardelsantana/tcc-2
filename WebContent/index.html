@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+  <head>
+    <meta charset="UTF-8">
+    <title>TONetS - Optical Network Simulator </title>
+      <link rel="stylesheet" href="css/style.css">
+
+    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+    
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sx-12">
+        <div class="panel hiq-panel">
+            
+            
+            
+          <div class="panel-heading hiq-panel-heading">
+            <ul id="hiq-info-tabs" class="nav nav-tabs hiq-info-tabs">
+              <li class="active">
+                <a data-tab="tab-1"  href="#">Simulation Settings</a>
+              </li>
+              <li>
+                <a data-tab="tab-2" href="#" title="Some tips about the use of TONetS">How to Use</a>
+              </li>
+              <li>
+                <a data-tab="tab-3" href="#" title="TONetS's History">About this Simulator</a>
+              </li>
+              <li>
+                  <a data-tab="tab-4" href="#" title="Frequently Asked Questions">FAQ and Contact</a>
+              </li>
+            </ul>
+          </div>
+            
+            
+            
+          <div class="panel-body hiq-panel-body">           
+              <div id="tab-1" class="tab-content active">
+
+                  <div class="row">
+                    <div class="col-md-3 text-center">
+                    <div class="form-group">
+                      <label for="numero_replicacoes" title="Quantity of replication per simulation">Reply Number:</label>
+
+                      <input required="" class="form-control" id="numero_replicacoes" maxlength="100" min="0" name="numero_replicacoes" placeholder="" type="number" value="1" title="Quantity of replication per simulation">
+                    </div>
+
+                  </div>
+                    
+                    
+                  <div class="col-md-3 text-center">
+                    <div class="form-group">
+                      <label for="numero_requisicoes" title="Quantity of requests per Simulation">Requests Number:</label>
+
+                      <input required="" class="form-control" id="numero_requisicoes" maxlength="100" min="1" name="numero_requisicoes" placeholder="" type="number" value="1" title="Quantity of requests per Simulation">
+                    </div>
+
+                  </div>
+                      
+                      
+                    <div class="col-md-3 text-center">
+                        <div class="form-group">
+                          <label for="numero_pontos_de_carga" title="Incrementation Traffic's Point">Loadpoints :</label>
+
+                          <input required="" class="form-control" id="numero_pontos_de_carga" maxlength="100" min="1" name="numero_pontos_de_carga" placeholder="" type="number" value="1" title="Incrementation Traffic's Point">
+                        </div>
+                    
+                      </div>
+                    <div class="col-md-3 text-center">
+                        <div class="form-group">
+                          <label for="significance" title="Assurance Range of Results">Significance:</label>
+                          <input required="" id="significance"  min="0.0" max="100.0" name="significance" type="range" onchange="updateTextInput(this.value);" step="0.1" value="95.0" title="Assurance Range of Results">
+                            <input type="text" id="textInput" value="" readonly title="Assurance Range of Results">
+                        </div>
+                    </div>
+
+                  </div>
+                    
+                  
+                <div class="row">                  
+                    
+                  <div class="col-md-6 text-center">
+                    <div class="form-group">
+                      <label for="topology" title="Nodes Positioning">Topology:</label>
+                      <select class="form-control" id="topology" name="topology">
+                        <option value="1">USA</option>
+                        <option value="2">R6NTL</option>
+                        <option value="3">Brasileira</option>
+                        <option value="4"> EON </option>
+                      </select>
+                    </div>
+                  </div>
+                
+                    
+                    <div class="col-md-6 text-center">
+                    <div class="form-group">
+                      <label for="algorithm" title="Routing and Spectrum Allocation"><abbr title="Routing and Spectrum Allocation">RSA</abbr> Algorithm:</label>
+                      <select class="form-control" id="algorithm" name="algorithm">
+                        <option value="20">First-fit</option>
+                        <option value="14">Random</option>
+                        <option value="24">Exact-fit</option>
+                        <option value="11">Random-fit</option>
+                      </select>
+                    </div>
+
+                  </div>
+                
+                  
+                    
+                    
+                    <div class="panel-footer hiq-panel-footer">
+                        <div class="row">
+                              <div class="col-xs-12">
+                               <p><a class="btn btn-primary btn-lg hiq-btn" href="#" role="button" title="Start a Simulation">Run Simulation</a></p>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                  
+              
+              
+              <div id="tab-2" class="tab-content">
+                <div class="row">
+                    <div class="col-md-6  text-center">
+                        <div class="form-group">
+                            <h1> Tab 2</h1>
+                        </div>
+                        
+                    </div>
+                </div>
+             </div>
+              
+              
+              <div id="tab-3" class="tab-content">
+                <div class="row">
+                    <div class="col-md-6  text-center">
+                        <div class="form-group">
+                            <h1> Tab 3</h1>
+                        </div>
+                        
+                    </div>
+                </div>
+             </div>
+              
+              
+              <div id="tab-4" class="tab-content">
+                <div class="row">
+                    <div class="col-md-6  text-center">
+                        <div class="form-group">
+                            <h1> Tab 4</h1>
+                        </div>
+                        
+                    </div>
+                </div>
+             </div>
+              
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  
+<!--
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  -->   
+        
+        <!-- script do input relacionado ao range -->
+    <script> 
+        function updateTextInput(val) {
+          document.getElementById('textInput').value=val+"%"; 
+        }
+    </script>
+
+    <script src='js/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

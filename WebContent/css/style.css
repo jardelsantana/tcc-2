@@ -1,0 +1,79 @@
+body{
+    background-image: url('../textura.png');
+}
+
+/*TAB MODIFIER*/
+.nav.nav-tabs.hiq-info-tabs{
+  background:#8844ee;
+  padding:1px 0 0;
+  margin-bottom:-2px;
+}
+
+.nav.nav-tabs.hiq-info-tabs li a{
+   color:#fff;
+   font-weight:bold;
+   border-radius:0;
+   border:0;
+   border-radius:0; 
+   background: rgba(0, 0, 0, 0.62);
+   transition: all 0.4s ease 0s;
+}
+.nav.nav-tabs.hiq-info-tabs li a:hover,
+.nav.nav-tabs.hiq-info-tabs li a:focus{
+  background-color:#7034c9;
+  color:#fff;
+  border:0;
+  
+}
+.nav.nav-tabs.hiq-info-tabs li.active a{
+  background:#8844ee;
+}
+.nav.nav-tabs.hiq-info-tabs li.active a:hover{
+  background-color:#8844ee;
+  border:0;
+  color:#fff;
+}
+.hiq-info-tabs{
+  background:#fff;
+}
+
+/*  PANEL MODIFIER;*/
+.panel .hiq-panel-body{
+  min-height:250px;
+  background:#8844ee;
+}
+.panel .hiq-panel-body label{
+  color:#fff;
+}
+.hiq-panel-body input[type="text"],
+.hiq-panel-body input[type="textarea"]{
+  border-radius:0 !important;
+}
+.panel-heading.hiq-panel-heading {
+    padding:0;
+}
+.panel-footer.hiq-panel-footer {
+    background:#8844ee;
+    border:0;
+    border-radius:0;
+}
+
+/*  BUTTON MODIFIER */
+.btn.btn-primary.btn-lg.hiq-btn{
+  background:rgba(0, 0, 0, 0.62);
+  border-color: aqua;
+  float:right;
+  border-radius:0;
+  transition: all 0.3s ease 0s;
+}
+.btn.btn-primary.btn-lg.hiq-btn:hover{
+  background:#7034c9;
+}
+
+/*  TAB CONTENT */
+.tab-content{
+  display:none;
+}
+.tab-content.active{
+  display:block;
+}
